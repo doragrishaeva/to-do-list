@@ -1,14 +1,8 @@
-//-когда input.value.length() > 0 и input не в focus, добавляем чек бокс
+//+когда input.value.length() > 0 и input не в focus, добавляем чек бокс
 //-когда чекбокс нажат, содержимое input зачеркивается
 //+когда нажимается + то клонируется input пустой 
-//-если содержимое строки стирается то чек бокс убирается
-
-// input.onblur = function() {
-//     if (!input.value.includes('@')) { // не email
-//       input.classList.add('invalid');
-//       error.innerHTML = 'Пожалуйста, введите правильный email.'
-//     }
-//   };
+//+если содержимое строки стирается то чек бокс убирается
+//+когда нажимается чекбокс, то появляется галочка в нем
 
 //add new empty string 
 const addNewButton = document.getElementById('add-new');
