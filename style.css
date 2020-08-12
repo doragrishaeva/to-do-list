@@ -1,0 +1,95 @@
+body {
+    background-color: #383838;
+    margin-left: 20%;
+}
+
+.container {
+    display: inline-block;
+}
+
+h1 {
+    text-align: justify;
+    font-family: monospace;
+    color: #ffffff;
+    font-size: 90px;
+    font-weight: 100;
+    overflow: hidden;
+    border-right: .17em solid #ffffff;  
+    white-space: nowrap;  
+    letter-spacing: 0.1em;
+    animation:  
+    typing 5s steps(20, end),
+    blink-caret .5s steps(20, end) infinite;
+}
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+.add-new {
+    width: 30px;
+    height: 30px;
+}
+
+.plus {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.plus:hover {
+    border-radius: 100%;
+    background-color: #a9a9a9;
+    transition: background-color 1s ease;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    display: inline-block;
+    width: 45%;
+    height: 25px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: #ffffff 1px solid;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 100;
+    color: #a9a9a9;
+}
+
+::-webkit-input-placeholder {
+    color:#ffffff;
+    opacity: 0.6;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 100;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+.empty-box, .checked  {
+    color: #ffffff;
+    opacity: 0.6;
+    display: none;
+    margin-left: -50px;
+}
