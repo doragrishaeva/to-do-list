@@ -91,12 +91,13 @@ main {
     color: transparent;
   }
 
-.empty-box, .checked  {
+.empty-box  {
     color: #ffffff;
-    opacity: 0.6;
-    display: none;
-    margin-left: -50px;
     cursor: pointer;
+    display: none;
 }
 
 
+path {
+    pointer-events: none;
+}
