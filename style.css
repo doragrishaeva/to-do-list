@@ -32,20 +32,16 @@ h1 {
     50% { border-color: white }
 }
 
-.add-new {
-    width: 30px;
-    height: 30px;
-}
-
 .plus {
     text-align: center;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 50px;
+    border-radius: 100%;
+    width: 50px;
     margin-top: 0px;
 }
 
 .plus:hover {
-    border-radius: 100%;
     background-color: #a9a9a9;
     transition: background-color 1s ease;
 }
@@ -64,15 +60,16 @@ main {
     display: inline-block;
     width: 45%;
     height: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: transparent;
     border: none;
     outline: none;
     border-bottom: #ffffff 1px solid;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 100;
     color: #a9a9a9;
+    padding-bottom: 10px;
 }
 
 .line_checked {
@@ -100,4 +97,55 @@ main {
 
 path {
     pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin-left: 10%;
+    }
+    h1 {
+        font-size: 80px;
+        margin-top: 50px;
+    }
+    .line {
+        width: 80%;
+        margin-bottom: 50px;
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    .inputs-container {
+        margin-top: 50px;
+    }
+    .empty-box {
+        width: 40px;
+        height: 40px;
+    }
+    ::-webkit-input-placeholder {
+        font-size: 30px;
+    }
+    .plus {
+        width: 80px;
+        font-size: 80px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        margin-left: 5%;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .line {
+        width: 80%;
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+    .empty-box {
+        width: 35px;
+        height: 35px;
+    }
+    ::-webkit-input-placeholder {
+        font-size: 25px;
+    }
 }

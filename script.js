@@ -1,9 +1,3 @@
-//To be done:
-//adaptive design
-//keyup events
-//style placeholders and plus button
-//text-decoration line-through on the whole input
-
 jQuery(document).ready(function() {
 
     //add new empty string 
@@ -19,7 +13,7 @@ jQuery(document).ready(function() {
         linesContainer.append(clone);
     });
 
-    //show checkbox
+    //toggle checkbox
     $(document).on('change', '.line', function(e) {
         //show transparent checkbox if text had been added in a row
         if (e.target.value.length >0) {
@@ -33,11 +27,17 @@ jQuery(document).ready(function() {
         };
     });
 
-
     //toggle 'line-through' text property
     $(document).on('click', '.empty-box', function(e) {
         let currentInput = $(e.target).parent().children('input');
         ($(currentInput).hasClass('line_checked')) ? ($(currentInput).removeClass('line_checked'), $(e.target).css('background-color', 'transparent')) : ($(currentInput).addClass('line_checked'), $(e.target).css({'background-color':'green', 'background-size':'contain'}))
     });
+
+    //focus on next input by pressing enter
+    $('.line').keypress(function(e) {
+        if (e.keyCode === 13) {
+            $(e.target).parent().next().find('.line').focus();
+        }
+    })
 
 });
